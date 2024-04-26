@@ -9,8 +9,8 @@ interface IPData {
 const rateLimitMap: Map<string, IPData> = new Map();
 export function middleware(request: NextRequest) {
   const ip: any = request.headers.get("x-forwarded-for") || request.ip;
-  const limit: number = 5; // Limiting requests to 5 per minute per IP
-  const windowMs: number = 60 * 1000 * 24; // 1 minute
+  const limit: number = 5; // Limiting requests to 5 per 24 hours per IP
+  const windowMs: number = 24 * 60 * 60 * 1000; // 24 hours in milliseconds
   if (!rateLimitMap.has(ip)) {
     rateLimitMap.set(ip, {
       count: 0,

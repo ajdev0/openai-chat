@@ -76,7 +76,8 @@ const Chat: React.FC = () => {
       <div className="flex border-b-2 border-white/10 justify-between p-4 bg-white/20">
         <div></div>
         <div className="text-[#ff7c00] flex flex-col text-center font-ibm">
-          <h3 className=" text-3xl">Techy</h3> <span>gpt-3.5-turbo</span>
+          <h3 className=" text-xl font-bold md:text-3xl">Techy</h3>{" "}
+          <span className="font-light">gpt-3.5-turbo</span>
         </div>
         <div className="bg-gradient-to-t from-[#FFA34D] to-[#ff7c00]  rounded shadow w-10 h-10 flex items-center justify-center">
           {count}/5
